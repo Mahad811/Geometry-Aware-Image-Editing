@@ -1,0 +1,25 @@
+Can you provide a Python code snippet to integrate ControlNet into the standard SDXL inpainting pipeline using the diffusers library?
+
+I'm building an architectural editing tool. How do I initialize the StableDiffusionXLInpaintPipeline to accept ControlNet inputs?
+
+I need to use MultiControlNet. How do I pass both a Depth ControlNet and a Canny ControlNet into a single SDXL pipeline?
+
+Show me the syntax for stacking multiple ControlNet branches (Depth + Edge) and managing their outputs during the diffusion process.
+
+How do I properly format the conditioning tensors (depth and edge maps) to pass them into the __call__ function of the SDXL pipeline?
+
+I want to automate the masking process. How can I pipe the output mask from CLIPSeg directly into the SDXL Inpainting mask_image argument?
+
+Write a function to load a pre-trained MiDaS model and extract a normalized depth map from an input image for ControlNet guidance.
+
+What is the most efficient way to infer depth from a single monocular architectural image using dpt-large or MiDaS?
+
+What are good lower and upper thresholds for Canny edge detection if I want to capture architectural details without too much noise? Can you write a script to test different thresholds?
+
+What is the best workflow to pre-process an image and extract both depth and edge maps to serve as geometry guidance for a diffusion model?
+
+How do I implement CLIPSeg to take a text prompt (like 'wall') and output a binary mask of that region?
+
+I have a prompt like 'Replace the concrete wall with brick'. How can I parse this string to extract the target object ('concrete wall') to send to CLIPSeg?
+
+What logic should I use to threshold the CLIPSeg probability map and refine it into a clean binary mask for inpainting?
